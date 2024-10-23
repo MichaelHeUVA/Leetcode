@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/description/
+# https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/description/?envType=daily-question&envId=2024-10-21
 
 
 class Solution:
