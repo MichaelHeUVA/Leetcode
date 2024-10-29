@@ -21,7 +21,7 @@ class Solution:
             left = dfs(node.left)
             right = dfs(node.right)
             mid = node.val == p.val or node.val == q.val
-            if (mid and (left or right)) or (left and right) and not lca:
+            if (mid and (left or right)) or (left and right):
                 lca = node
             return mid or left or right
 
