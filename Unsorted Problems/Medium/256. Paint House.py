@@ -17,7 +17,4 @@ class Solution:
                             dp[house][color],
                             dp[house - 1][possible_color] + costs[house][color],
                         )
-        min_cost = float("inf")
-        for color in range(colors):
-            min_cost = min(min_cost, dp[houses - 1][color])
-        return min_cost
+        return min(dp[-1])

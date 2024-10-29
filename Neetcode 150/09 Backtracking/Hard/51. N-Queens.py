@@ -100,8 +100,6 @@ class Solution:  # noqa: F811
 
             for col in range(n):
                 if canPlaceQueen(row, col, board):
-                    print(board)
-                    print(queens)
                     board[row] = placeQueen(row, col, board)
                     backtrack(row + 1, board, queens + 1)
                     board[row] = removeQueen(row, col, board)

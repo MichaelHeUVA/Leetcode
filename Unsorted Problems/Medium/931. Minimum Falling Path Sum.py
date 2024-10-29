@@ -20,10 +20,4 @@ class Solution:
                         dp[row][col], dp[row - 1][col + 1] + matrix[row][col]
                     )
                 dp[row][col] = min(dp[row][col], dp[row - 1][col] + matrix[row][col])
-
-        min_sum = float("inf")
-        for row in dp:
-            print(row)
-        for col in range(cols):
-            min_sum = min(min_sum, dp[rows - 1][col])
-        return min_sum
+        return min(dp[-1])

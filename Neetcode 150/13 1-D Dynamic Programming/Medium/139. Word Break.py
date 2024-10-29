@@ -11,5 +11,4 @@ class Solution:
                 if dp[j] and s[j:i] in wordDict:
                     dp[i] = True
                     break
-        print(dp)
         return dp[-1]

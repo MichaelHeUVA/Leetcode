@@ -4,7 +4,6 @@
 class Solution:
     def simplifyPath(self, path: str) -> str:
         path = path.split("/")
-        print(path)
         stack = []
         for directory in path:
             if not directory or directory == ".":
