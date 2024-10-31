@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/?envType=problem-list-v2&envId=ad2t7zbr
+# https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/
 from typing import List, Optional
 
 
