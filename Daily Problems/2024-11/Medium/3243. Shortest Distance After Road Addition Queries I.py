@@ -29,4 +29,3 @@ class Solution:
             adj_list[u].append(v)
             output.append(bfs())
         return output
-

@@ -48,4 +48,4 @@ class Solution:
                     if next not in dist or dist[next] > dist[state] + 1:
                         dist[next] = dist[state] + 1
                         heappush(q, (dist[next] + f(next), next))
-        return -1 
+        return -1
