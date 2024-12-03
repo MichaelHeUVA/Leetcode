@@ -6,6 +6,6 @@ class Solution:
         words = sentence.split()
         print(words)
         for i, word in enumerate(words):
-            if len(searchWord) <= len(word) and word[:len(searchWord)] == searchWord:
+            if len(searchWord) <= len(word) and word[: len(searchWord)] == searchWord:
                 return i + 1
         return -1

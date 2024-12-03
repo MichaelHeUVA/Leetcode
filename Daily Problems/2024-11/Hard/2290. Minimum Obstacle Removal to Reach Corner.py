@@ -1,5 +1,4 @@
 # https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/?envType=daily-question&envId=2024-11-28
-from collections import defaultdict
 from heapq import heappop, heappush
 from typing import List
 
@@ -9,7 +8,7 @@ class Solution:
         rows = len(grid)
         cols = len(grid[0])
         pq = [(grid[0][0], 0, 0)]
-        dist = [[float('inf')] * cols for _ in range(rows)]
+        dist = [[float("inf")] * cols for _ in range(rows)]
         dist[0][0] = grid[0][0]
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         while pq:

@@ -7,7 +7,7 @@ class Solution:
     def slidingPuzzle(self, board: List[List[int]]) -> int:
         m, n = 2, 3
         seq = []
-        start, end = '', '123450'
+        start, end = "", "123450"
         for i in range(m):
             for j in range(n):
                 if board[i][j] != 0:
@@ -22,8 +22,8 @@ class Solution:
         def f(s):
             ans = 0
             for i in range(m * n):
-                if s[i] != '0':
-                    num = ord(s[i]) - ord('1')
+                if s[i] != "0":
+                    num = ord(s[i]) - ord("1")
                     ans += abs(i // n - num // n) + abs(i % n - num % n)
             return ans
 
@@ -35,7 +35,7 @@ class Solution:
             _, state = heappop(q)
             if state == end:
                 return dist[state]
-            p1 = state.index('0')
+            p1 = state.index("0")
             i, j = p1 // n, p1 % n
             s = list(state)
             for a, b in [[0, -1], [0, 1], [1, 0], [-1, 0]]:
@@ -43,7 +43,7 @@ class Solution:
                 if 0 <= x < m and 0 <= y < n:
                     p2 = x * n + y
                     s[p1], s[p2] = s[p2], s[p1]
-                    next = ''.join(s)
+                    next = "".join(s)
                     s[p1], s[p2] = s[p2], s[p1]
                     if next not in dist or dist[next] > dist[state] + 1:
                         dist[next] = dist[state] + 1

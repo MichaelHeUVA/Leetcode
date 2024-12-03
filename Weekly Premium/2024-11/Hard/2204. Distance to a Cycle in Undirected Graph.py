@@ -2,6 +2,7 @@
 from collections import defaultdict, deque
 from typing import List
 
+
 class Solution:
     def distanceToCycle(self, n: int, edges: List[List[int]]) -> List[int]:
         adj_list = defaultdict(list)

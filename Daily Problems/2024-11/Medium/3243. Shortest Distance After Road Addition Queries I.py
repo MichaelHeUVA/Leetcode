@@ -5,7 +5,9 @@ from typing import List
 
 
 class Solution:
-    def shortestDistanceAfterQueries(self, n: int, queries: List[List[int]]) -> List[int]:
+    def shortestDistanceAfterQueries(
+        self, n: int, queries: List[List[int]]
+    ) -> List[int]:
         adj_list = defaultdict(list)
         adj_list[0].append(1)
         for i in range(1, n - 1):
@@ -13,7 +15,7 @@ class Solution:
 
         def bfs():
             pq = [(0, 0)]
-            dist = [float('inf')] * n
+            dist = [float("inf")] * n
             while pq:
                 d, u = heappop(pq)
                 for v in adj_list[u]:
@@ -24,7 +26,7 @@ class Solution:
                         heappush(pq, (dist[v], v))
             return dist[n - 1]
 
-        output = []  
+        output = []
         for u, v in queries:
             adj_list[u].append(v)
             output.append(bfs())
