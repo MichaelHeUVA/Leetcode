@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/two-best-non-overlapping-events/description/
+# https://leetcode.com/problems/two-best-non-overlapping-events/?envType=daily-question&envId=2024-12-08
 from typing import List
 
 
